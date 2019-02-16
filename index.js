@@ -14,11 +14,17 @@ const homeRoute = get('/', async () => {
 
 
 function delCache() {
-  fs.unlink('db.json', function (err) {
-    if (err) throw err;
-    console.log('File deleted!');
-  });
+  if (fs.existsSync("db.json")) {
+    fs.unlink('db.json', function (err) {
+      if (err) throw err;
+      console.log('File deleted!');
+    });
+  }
 }
 
+setInterval(function () {
+  delCache();
+}, 5000);
 
-server({ port: 3000 }, homeRoute, get(ctx => status(404)), post('/', ctx => json(ctx.data)));
+
+server({ port: 2700 }, homeRoute, get(ctx => status(404)), post('/', ctx => json(ctx.data)));

@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
+<script>
+function reload(){
+  location.reload();
+}
+</script>
 <head>
   <title>Spreadsheet Tutorial</title>
   <link rel="stylesheet" href="https://unpkg.com/picnic@6">
@@ -14,7 +19,7 @@
 
 <body>
   <main>
-    <h1>Users</h1>
+    <h1>Show from Spreadsheet</h1>
 
     <table>
       <tr>
@@ -27,6 +32,8 @@
         </tr>
       {{/each}}
     </table>
+
+    <button onclick="reload()"> Reload </button>
 
   </main>
 </body>
