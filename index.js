@@ -12,4 +12,4 @@ const homeRoute = get('/', async () => {
   return render('index.hbs', { users: db.find() });
 });
 
-server(3000, homeRoute);
+server({ port: 3000 }, homeRoute, get(ctx => status(404)), post('/', ctx => json(ctx.data)));
