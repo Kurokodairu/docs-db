@@ -1,0 +1,15 @@
+{
+  "name": "docs-db",
+  "version": "1.0.0",
+  "description": "Spreadsheet database",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm ."
+  },
+  "author": "Kurokodairu",
+  "license": "ISC",
+  "dependencies": {
+    "drive-db": "^4.1.0",
+    "server": "^1.0.18"
+  }
+}

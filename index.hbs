@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Spreadsheet Tutorial</title>
+  <link rel="stylesheet" href="https://unpkg.com/picnic@6">
+  <style>
+    main { width: 90%; max-width: 800px; margin: 30px auto; }
+    table, canvas, img { width: 100%; }
+    h2 { padding-bottom: 20px; }
+    .card { margin: 0; }
+    #map { height: 400px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Users</h1>
+
+    <h1>Simple list</h1>
+<ul class="flex one three-800">
+  {{#each users}}
+    <li>{{this.NAME}} {{this.VALUE}}</li>
+  {{/each}}
+</ul>
+
+  </main>
+</body>
+</html>
