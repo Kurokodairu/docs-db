@@ -12,7 +12,7 @@ const homeRoute = get('/', async () => {
   return render('index.hbs', { users: db.find() });
 });
 
-server(25566, homeRoute);
+server(3000, homeRoute);
 
 function deleteCache() {
   fs.unlink("db.json", function (err) {
