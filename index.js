@@ -14,13 +14,6 @@ const homeRoute = get('/', async () => {
 
 server(3000, homeRoute);
 
-function deleteCache() {
-  fs.unlink("db.json", function (err) {
-    if (err) throw err;
-    console.log("DB Cache Deleted!");
-  });
-}
-
 setInterval(function(){
   deleteCache();
 }, 5000);
