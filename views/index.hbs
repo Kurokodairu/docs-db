@@ -11,16 +11,22 @@
     #map { height: 400px; }
   </style>
 </head>
+
 <body>
   <main>
     <h1>Users</h1>
 
-    <h1>Simple list</h1>
-<ul class="flex one three-800">
-  {{#each users}}
-    <li>{{this.NAME}} {{this.VALUE}}</li>
-  {{/each}}
-</ul>
+    <table>
+      <tr>
+        <th>Text</th> <th>Value</th>
+      </tr>
+      {{#each users}}
+        <tr>
+          <td>{{this.text}}</td>
+          <td>{{this.value}}</td>
+        </tr>
+      {{/each}}
+    </table>
 
   </main>
 </body>
