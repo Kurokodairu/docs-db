@@ -13,7 +13,3 @@ const homeRoute = get('/', async () => {
 });
 
 server(3000, homeRoute);
-
-setInterval(function(){
-  deleteCache();
-}, 5000);
