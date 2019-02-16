@@ -12,4 +12,13 @@ const homeRoute = get('/', async () => {
   return render('index.hbs', { users: db.find() });
 });
 
+
+function delCache() {
+  fs.unlink('db.json', function (err) {
+    if (err) throw err;
+    console.log('File deleted!');
+  });
+}
+
+
 server({ port: 3000 }, homeRoute, get(ctx => status(404)), post('/', ctx => json(ctx.data)));
