@@ -8,8 +8,11 @@ const drive = require('drive-db')(id);
 
 const homeRoute = get('/', async () => {
   const db = await drive.load();
-  console.log(db.find());
-  return render('index.hbs', { users: db.find() });
+  users = db.find();
+  for (index = 0; index < users.length; ++index) {
+    console.log(users[index]);
+}
+  return render('index.hbs', { users: users });
 });
 
 
@@ -17,7 +20,6 @@ function delCache() {
   if (fs.existsSync("db.json")) {
     fs.unlink('db.json', function (err) {
       if (err) throw err;
-      console.log('File deleted!');
     });
   }
 }

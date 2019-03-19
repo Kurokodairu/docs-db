@@ -7,7 +7,6 @@ function reload(){
 </script>
 <head>
   <title>Spreadsheet Tutorial</title>
-  <link rel="stylesheet" href="https://unpkg.com/picnic@6">
   <style>
     main { width: 90%; max-width: 800px; margin: 30px auto; }
     table, canvas, img { width: 100%; }
@@ -20,7 +19,7 @@ function reload(){
 <body>
   <main>
     <h1>Show from Spreadsheet</h1>
-
+    <input type="checkbox" name="vehicle3" value="Boat" checked> mhm? <br>
     <table>
       <tr>
         <th>Text</th> <th>Value</th>
@@ -28,7 +27,7 @@ function reload(){
       {{#each users}}
         <tr>
           <td>{{this.text}}</td>
-          <td>{{this.value}}</td>
+          <td>Done? <input type="checkbox"> {{this.value}}</td>
         </tr>
       {{/each}}
     </table>
