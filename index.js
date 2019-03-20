@@ -29,4 +29,4 @@ setInterval(function () {
 }, 5000);
 
 
-server({ port: 2700 }, homeRoute, get(ctx => status(404)), post('/', ctx => json(ctx.data)));
+server({ port: 2700 }, homeRoute, post('/', ctx => json(ctx.data)));
