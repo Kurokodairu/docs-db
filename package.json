@@ -9,6 +9,7 @@
   "author": "Kurokodairu",
   "license": "ISC",
   "dependencies": {
+    "docker": "^1.0.0",
     "drive-db": "^4.1.0",
     "server": "^1.0.18"
   }
